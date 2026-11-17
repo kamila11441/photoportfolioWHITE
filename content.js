@@ -16,8 +16,7 @@ window.SITE = {
     "clients": [
       "Client one",
       "Client two",
-      "Client three",
-      "Client four"
+      "Client three"
     ],
     "awards": [
       "Award or publication, 2026",
