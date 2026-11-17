@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff">
+<title>Owner Manager — Photographer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#0e0e0e;--muted:#777;--line:#e4e4e4;--tile:#e9e9e9;--f:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;--pad:clamp(1rem,3vw,2.2rem)}
+@media(prefers-color-scheme:dark){:root{--bg:#0e0e0e;--ink:#f2f2f2;--muted:#8d8d8d;--line:#262626;--tile:#1e1e1e}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.5 var(--f);-webkit-font-smoothing:antialiased}button,input,textarea,select{font:inherit;color:inherit}a{color:inherit}.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:1rem;padding:1rem var(--pad)}.top .logo{font-weight:700;margin-right:auto;text-decoration:none}.top a:last-child{border:1px solid var(--line);border-radius:99px;padding:.55rem .9rem;text-decoration:none;font-size:.85rem}.wrap{max-width:1200px;margin:0 auto;padding:clamp(2rem,5vw,4rem) var(--pad) 6rem}.intro{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.5rem}.eyebrow{font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--muted)}h1{font-size:clamp(3.5rem,11vw,8.5rem);line-height:.83;letter-spacing:-.07em;font-weight:300;margin:.8rem 0 0}.intro p{color:var(--muted);max-width:23rem;margin:0}.panel{border:1px solid var(--line);padding:clamp(1rem,3vw,2rem);margin:0 0 1.2rem}.panel h2{font-weight:400;font-size:1.3rem;margin:0 0 1.25rem;letter-spacing:-.03em}.panel-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:.8rem;margin-bottom:1.2rem}.panel-head h2{margin:0}.panel-head p{font-size:.8rem;color:var(--muted);margin:0}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem 1.4rem}.field{display:flex;flex-direction:column;gap:.4rem;min-width:0}.field.full{grid-column:1/-1}.field label,.label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}.field input[type=text],.field input[type=email],.field input[type=password],.field input[type=url],.field input[type=number],.field textarea,.field select{width:100%;border:1px solid var(--line);background:var(--bg);padding:.72rem .8rem;border-radius:0;font-size:.95rem}.field textarea{min-height:6rem;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid color-mix(in srgb,var(--ink) 20%,transparent);outline-offset:1px}.help{font-size:.78rem;color:var(--muted);margin:.2rem 0 0}.image-pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.image-edit{display:grid;grid-template-columns:120px 1fr;gap:.9rem;align-items:center}.image-edit img{width:120px;height:90px;object-fit:cover;background:var(--tile)}.image-edit.portrait img{height:132px}.upload{display:inline-flex;align-items:center;border:1px solid var(--ink);padding:.65rem .85rem;cursor:pointer;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem}.upload:hover{background:var(--ink);color:var(--bg)}input[type=file]{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}.list-editor{display:grid;gap:.6rem}.line-row{display:flex;gap:.5rem;align-items:center}.line-row textarea{min-height:2.8rem;flex:1}.text-row{display:flex;gap:.5rem;align-items:center}.text-row input{flex:1}.project-list{display:grid;gap:1rem}.project-card{border:1px solid var(--line);padding:1rem}.project-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1rem}.project-head strong{font-size:.9rem;font-weight:500}.project-actions{display:flex;gap:.4rem}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem 1.2rem}.project-grid .full{grid-column:1/-1}.cover-preview{width:100%;height:150px;object-fit:cover;background:var(--tile);margin-bottom:.6rem}.image-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:.6rem}.image-card{border:1px solid var(--line);padding:.45rem;min-width:0}.image-card img{width:100%;height:105px;object-fit:cover;background:var(--tile);margin-bottom:.4rem}.button,.button-secondary,.danger{border:1px solid var(--line);background:transparent;padding:.7rem .9rem;cursor:pointer;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem}.button{background:var(--ink);color:var(--bg);border-color:var(--ink)}.button:hover{opacity:.75}.button-secondary:hover{border-color:var(--ink)}.danger:hover{border-color:#c33;color:#c33}.actions{position:sticky;bottom:0;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:1rem 0;display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;margin-top:1.5rem}.status{color:#377c52;font-size:.85rem;margin-left:auto}.status.error{color:#c33}.notice{background:var(--tile);padding:.85rem 1rem;color:var(--muted);font-size:.85rem;margin-bottom:1rem}.notice strong{color:var(--ink)}#managerApp[hidden],#loginPanel[hidden]{display:none!important}.login-grid{max-width:680px}.project-card select{min-width:0}
+@media(max-width:700px){.intro{display:block}.intro p{margin-top:1.3rem}.grid2,.image-pair,.project-grid{grid-template-columns:1fr}.field.full,.project-grid .full{grid-column:auto}.image-edit{grid-template-columns:95px 1fr}.image-edit img{width:95px}.project-head{align-items:flex-start}.project-head strong{max-width:50%}.image-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.panel-head{display:block}.panel-head p{margin-top:.35rem}.actions{gap:.5rem}.status{width:100%;margin:0}}
+</style>
+</head>
+<body>
+<header class="top"><a class="logo" href="index.html">OWNER STUDIO</a><a href="index.html">Preview portfolio ↗</a></header>
+<main class="wrap">
+  <div class="intro"><div><span class="eyebrow">Portfolio management</span><h1>Site<br>manager.</h1></div><p>Edit your photographer profile, projects, photographs and contact details. Log in with a GitHub repository token to manage the live site.</p></div>
+
+  <section class="panel login-grid" id="loginPanel" aria-labelledby="login-title">
+    <div class="panel-head"><h2 id="login-title">Log in</h2><p>Connect the portfolio repository</p></div>
+    <div class="grid2">
+      <div class="field"><label for="repoOwner">Repository owner</label><input id="repoOwner" type="text" autocomplete="off" placeholder="GitHub username"></div>
+      <div class="field"><label for="repoName">Repository name</label><input id="repoName" type="text" autocomplete="off" placeholder="portfolio-template"></div>
+      <div class="field full"><label for="repoToken">Repository token</label><input id="repoToken" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"></div>
+      <div class="field full"><button class="button" id="login" type="button">Log in and open manager</button><p class="help" id="loginStatus" role="status" aria-live="polite">Enter your repository details and token.</p></div>
+    </div>
+  </section>
+
+  <div id="managerApp" hidden>
+    <div class="notice" style="display:flex;justify-content:space-between;align-items:center;gap:1rem"><span id="connectionLabel">Connected</span><button class="button-secondary" id="logout" type="button">Log out</button></div>
+
+    <section class="panel">
+      <div class="panel-head"><h2>Identity</h2><p>Name, home screen and search summary</p></div>
+      <div class="grid2">
+        <div class="field"><label for="siteName">Photographer / studio name</label><input id="siteName" type="text"></div>
+        <div class="field"><label for="logo">Header wordmark</label><input id="logo" type="text"></div>
+        <div class="field full"><label for="titleLines">Home title lines (one per line)</label><textarea id="titleLines"></textarea></div>
+        <div class="field full"><label for="description">Portfolio description</label><textarea id="description"></textarea></div>
+        <div class="field full"><span class="label">Home and info photographs</span><div class="image-pair">
+          <div class="image-edit"><img id="heroPreview" alt="Home image preview"><div><label class="upload" for="heroFile">Change home image</label><input id="heroFile" type="file" accept="image/*"><p class="help">Wide image recommended.</p></div></div>
+          <div class="image-edit portrait"><img id="portraitPreview" alt="Info portrait preview"><div><label class="upload" for="portraitFile">Change info portrait</label><input id="portraitFile" type="file" accept="image/*"><p class="help">Portrait crop recommended.</p></div></div>
+        </div></div>
+        <div class="field full"><span class="label">Optional image logo</span><div class="image-edit"><img id="logoImgPreview" alt="Logo preview"><div><label class="upload" for="logoImgFile">Choose logo image</label><input id="logoImgFile" type="file" accept="image/*"><button class="button-secondary" id="clearLogoImage" type="button" style="margin-top:.5rem">Remove image logo</button></div></div></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h2>Info page</h2><p>Biography, clients and press</p></div>
+      <div class="grid2">
+        <div class="field"><label for="paragraphs">Biography paragraphs (one per line)</label><textarea id="paragraphs"></textarea></div>
+        <div class="field"><label for="clients">Clients (one per line)</label><textarea id="clients"></textarea></div>
+        <div class="field"><label for="awards">Awards and press (one per line)</label><textarea id="awards"></textarea></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h2>Contact</h2><p>How visitors can reach you</p></div>
+      <div class="grid2">
+        <div class="field"><label for="email">Email</label><input id="email" type="email"></div>
+        <div class="field"><label for="phone">Phone</label><input id="phone" type="text"></div>
+        <div class="field"><label for="location">Location</label><input id="location" type="text"></div>
+        <div class="field"><label for="representation">Representation (optional)</label><input id="representation" type="text"></div>
+        <div class="field full"><span class="label">Social links</span><div id="socialList" class="list-editor"></div><button class="button-secondary" id="addSocial" type="button">+ Add social link</button></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h2>Projects</h2><p>Each project appears in the home feed and Works grid</p></div>
+      <div id="projectList" class="project-list"></div>
+      <button class="button-secondary" id="addProject" type="button" style="margin-top:1rem">+ Add project</button>
+    </section>
+
+    <div class="actions"><button class="button" id="publish" type="button" disabled>Publish changes</button><button class="button-secondary" id="export" type="button">Export backup</button><label class="button-secondary" for="importFile">Import backup</label><input id="importFile" type="file" accept="application/json"><span class="status" id="editorStatus" role="status" aria-live="polite"></span></div>
+  </div>
+</main>
+<script src="content.js"></script>
+<script src="manager.js"></script>
+</body>
+</html>
+
