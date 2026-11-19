@@ -74,7 +74,7 @@ window.SITE = {
       "client": "Client",
       "year": 2025,
       "cover": "images/3-project-three-cover-mwo3ew3m-11.jpg",
-      "ratio": "3/2",
+      "ratio": "1/1",
       "text": "A short description of the brief, your role and the result.",
       "images": [
         "images/3-project-three-1-mwo3ew3m-12.jpg",
@@ -89,7 +89,7 @@ window.SITE = {
       "client": "Client",
       "year": 2025,
       "cover": "images/4-project-four-cover-mwo3ew3o-16.jpg",
-      "ratio": "4/5",
+      "ratio": "1/1",
       "text": "A short description of the brief, your role and the result.",
       "images": [
         "images/4-project-four-1-mwo3ew3o-17.jpg",
