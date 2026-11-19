@@ -40,9 +40,9 @@ header nav a.cur{text-decoration:underline;text-underline-offset:.25em}
 /* feed + grid */
 .feed{display:grid;gap:clamp(2rem,5vw,4rem);padding:clamp(2rem,5vw,4rem) var(--pad)}
 .item{display:block}
-.item .ph{background:var(--tile);overflow:hidden;aspect-ratio:var(--r,3/2)}
-.item .ph img{transition:transform .6s}
-.item:hover .ph img{transform:scale(1.025)}
+.item .ph{background:transparent;overflow:hidden;aspect-ratio:auto}
+.item .ph img{width:100%;height:auto;object-fit:contain}
+.item:hover .ph img{transform:none}
 .item .cap{display:flex;justify-content:space-between;gap:1rem;margin-top:.7rem;font-size:.95rem}
 .item .cap span{color:var(--muted)}
 .feed .item:nth-child(even){max-width:62%;justify-self:end}
@@ -57,7 +57,8 @@ header nav a.cur{text-decoration:underline;text-underline-offset:.25em}
 .meta p{margin:0;color:var(--ink);font-size:1.15rem;max-width:36rem}
 @media (max-width:760px){.meta{grid-template-columns:1fr}}
 .imgs{display:grid;gap:var(--pad)}
-.imgs .ph{background:var(--tile);aspect-ratio:3/2;overflow:hidden;display:grid;place-items:center;color:var(--muted)}
+.imgs .ph{background:transparent;aspect-ratio:auto;overflow:visible;display:block;color:var(--muted)}
+.imgs .ph img{width:100%;height:auto;object-fit:contain}
 .next{display:flex;justify-content:space-between;margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);font-size:1.4rem;letter-spacing:-.02em}
 
 /* info / contact */
@@ -91,7 +92,7 @@ footer{padding:2rem var(--pad) calc(2rem + env(safe-area-inset-bottom,0px));disp
   <section class="view" id="v-contact"><div class="page"><h2>Contact</h2><div id="contact"></div></div></section>
 </main>
 
-<footer><span><span id="fl"></span><br><a class="owner-link" href="manager.html">Manage</a></span><a href="#home">Back to top ↑</a></footer>
+<footer><span><span id="fl"></span><br><a class="owner-link" href="manager.html">Manage</a></span><a href="#home" id="backToTop">Back to top ↑</a></footer>
 
 <script src="content.js"></script>
 <script>
@@ -143,6 +144,11 @@ function route() {
   scrollTo(0, 0);
 }
 addEventListener("hashchange", route); route();
+document.querySelector("#backToTop").addEventListener("click", event => {
+  event.preventDefault();
+  if (location.hash !== "#home") location.hash = "#home";
+  else window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 /* preloader: counts once per visit, skipped for reduced motion */
 const pre = $("#pre"), seen = (() => { try { return sessionStorage.getItem("seen"); } catch (e) { return 1; } })();
